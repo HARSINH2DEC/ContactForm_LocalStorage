@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    CONTACT BOOK
+  </title>
+  <link href="ContactBook.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="ContactBook.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="ContactBook.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  <div class="container">
+    <div class="contacts">
+
+    </div>
+    <div class="addContacts">
+      <h2> ADD CONTACT</h2>
+      <div>
+        <div>
+          <label class="first"> FIRST NAME :</label>
+          <input type="text" ng-model="contact.fName" />
+        </div>
+        <div>
+          <label class="second"> SECOND NAME :</label>
+          <input type="text" ng-model="contact.sName" />
+        </div>
+
+        <div>
+          <label class="third"> EMAIL :</label>
+          <input type="email" ng-model="contact.email" />
+        </div>
+
+        <div>
+          <label class="fourth"> Phone Number :</label>
+          <input type="text" ng-model="contact.number" />
+        </div><br><br>
+        <div>
+          <button ng-click="saveContact(contact)">SAVE</button>
+        </div>
+        {{contact}} --> {{contactFromStorage}}
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
