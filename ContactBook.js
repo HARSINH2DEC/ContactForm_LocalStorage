@@ -23,7 +23,7 @@ app.controller("myCtrl", function($scope) {
     // new object creation from the frontend to be pushed in contactArrey
     //Its very critical step to create a new object which will hold the values once pushed
     $scope.contactsaved = {
-      srNo:$scope.contact.$index;
+   //   srNo:$scope.contact.$index;
       fName: $scope.contact.fName,
       sName: $scope.contact.sName,
       contact: $scope.contact.number,
