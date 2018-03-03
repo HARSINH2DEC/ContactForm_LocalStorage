@@ -21,5 +21,14 @@ How to make multiple recods in local storage . Coz each time i was clicking on s
 
 I was declaring the arrey to be saved inside the save function and hece it was getting emptied  or refreshed every time i was clicking on the save button .
 
+# Challange 2 :-
 
+After refresh the declared arrey was getting emptied . thus local storage was getting updated with the new arrey values and not retaining the old values 
+
+#Solution :-
+Code block 9-17
+
+#Challenge 3 :-
+
+concat() VS push() 
 

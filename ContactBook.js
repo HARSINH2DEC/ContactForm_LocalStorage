@@ -7,16 +7,22 @@ app.controller("myCtrl", function($scope) {
   //And hece the local storage was getting updated with the empty arrey
   // Thus needed to initialize it with values from the local storage everytime from the refresh
   if (localStorage.getItem("contacts")) {
-    $scope.contactArrey.push(JSON.parse(localStorage.getItem("contacts")));
+    // initially i had used :-
+   // $scope.contactArrey.push(JSON.parse(localStorage.getItem("contacts")));
+    // Concat function was best to use here as arrey.push was changing the json structor  after refresh each time 
+    $scope.contactArrey = $scope.contactArrey.concat(JSON.parse(localStorage.getItem("contacts")));
+
+    console.log(JSON.parse(localStorage.getItem("contacts")));
   } else {
     alert("No contacts");
   }
 
+  // a javascript IFFE
   ($scope.retrieveFromStorage = function() {
     $scope.contactFromStorage = localStorage.getItem("contacts");
     return $scope.contactFromStorage
       ? JSON.parse($scope.contactFromStorage)
-      : [];
+      : $scope.contactArrey = [];
   })();
 
   $scope.saveContact = function(contact) {

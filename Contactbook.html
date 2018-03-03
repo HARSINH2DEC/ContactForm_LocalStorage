@@ -12,13 +12,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
   <script src="ContactBook.js"></script>
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
   <div class="container">
     <div class="contacts">
+      <table class=".table-bordered">
+        <tr>
+          <th>FIRST NAME</th>
+          <th> EMAIL </th>
+          <th> CONTACT </th>
+        </tr>
+        <tr ng-repeat="x in contactArrey track by $index" >
+          <td>{{x.fName}}</td>
+          <td>{{x.email}}</td>
+          <td>{{x.contact}}</td>
+          
+        </tr>
 
+
+      </table>
     </div>
     <div class="addContacts">
       <h2> ADD CONTACT</h2>
@@ -44,7 +59,7 @@
         <div>
           <button ng-click="saveContact(contact)">SAVE</button>
         </div>
-        {{contact}} --> {{contactFromStorage}}
+
       </div>
 
     </div>
