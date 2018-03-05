@@ -1,7 +1,9 @@
 
 .first{
 
-    margin-right: 10%;
+    margin-right: 8%;
+    margin-top: 5%;
+    
 }
 .second{
     margin-right: 8%;
@@ -17,3 +19,49 @@
     margin-top: 5%;
 
 }
+.contacts{
+    
+    background-color: #00bcd414;
+    border-width: thin;
+    float: right;
+    width: 49%;
+    margin: 1px;
+}
+ td  , tr{
+    padding: 15px;
+    text-align: left;
+    border: solid;
+    border-color: #E91E63;
+    border-width:thin;
+    padding: 15px;
+    text-align: left;
+    height: 40px;
+    
+}
+
+th{
+    height: 50px;
+    padding: 15px;
+    text-align: left;
+    border: solid;
+    border-color: #E91E63;
+    border-width:thin;
+    padding: 15px;
+    text-align: left;
+
+}
+
+table {
+    width: 100%;
+}
+.addContacts{
+    float: left;
+    border: solid;
+    border-width: thin;
+    border-color: #D81B60;
+    background-color: #D1C4E9;
+    width: 49%;
+    margin: 1px
+    
+}
+

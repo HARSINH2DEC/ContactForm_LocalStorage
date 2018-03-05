@@ -1,4 +1,5 @@
 var app = angular.module("myApp", []);
+
 app.controller("myCtrl", function($scope) {
   $scope.contactArrey = [];
 
@@ -26,6 +27,7 @@ app.controller("myCtrl", function($scope) {
   })();
 
   $scope.saveContact = function(contact) {
+
     // new object creation from the frontend to be pushed in contactArrey
     //Its very critical step to create a new object which will hold the values once pushed
     $scope.contactsaved = {
@@ -35,6 +37,7 @@ app.controller("myCtrl", function($scope) {
       contact: $scope.contact.number,
       email: $scope.contact.email
     };
+    
     $scope.contactArrey.push($scope.contactsaved);
     localStorage.setItem("contacts", JSON.stringify($scope.contactArrey));
     $scope.retrieveFromStorage();
