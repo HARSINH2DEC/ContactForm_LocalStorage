@@ -57,6 +57,7 @@ app.controller("myCtrl", function($scope) {
   }
 
   $scope.delete=function(item){
+    // mapping object to delete
     var idx = $scope.contactArrey.indexOf(item);
     $scope.contactArrey.splice(idx, 1);
    
