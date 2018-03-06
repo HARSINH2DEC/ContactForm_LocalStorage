@@ -52,11 +52,14 @@ app.controller("myCtrl", function($scope) {
     $scope.contact.sName=item.sName ;
     $scope.contact.number=item.contact;
     $scope.contact.email=item.email;
+    $scope.contactArrey.indexOf(item);
+
   }
 
   $scope.delete=function(item){
-    $scope.contactArrey.indexOf(item);
-    $scope.contactArrey.splice(item, 1);
-
+    var idx = $scope.contactArrey.indexOf(item);
+    $scope.contactArrey.splice(idx, 1);
+   
+ localStorage.setItem("contacts", JSON.stringify($scope.contactArrey));
   }
 });
